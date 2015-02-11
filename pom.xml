@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>moment-timezone</artifactId>
-    <version>0.3.0-SNAPSHOT</version>
+    <version>0.3.0</version>
     <name>Moment.js Timezone plugin</name>
     <description>WebJar for Moment.js Timezone</description>
     <url>http://webjars.org</url>
@@ -53,7 +53,7 @@
         <url>http://github.com/webjars/moment-timezone</url>
         <connection>scm:git:https://github.com/webjars/moment-timezone.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/moment-timezone.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>moment-timezone-0.3.0</tag>
     </scm>
     
     <dependencies>
