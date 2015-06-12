@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>moment-timezone</artifactId>
-    <version>0.4.0-SNAPSHOT</version>
+    <version>0.4.0</version>
     <name>Moment.js Timezone plugin</name>
     <description>WebJar for Moment.js Timezone</description>
     <url>http://webjars.org</url>
@@ -57,7 +57,7 @@
         <url>http://github.com/webjars/moment-timezone</url>
         <connection>scm:git:https://github.com/webjars/moment-timezone.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/moment-timezone.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>moment-timezone-0.4.0</tag>
     </scm>
     
     <dependencies>
@@ -80,18 +80,18 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="download archive"/>
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip"/>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="download archive" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
                                     <fileset dir="${project.build.directory}/moment-timezone-${upstream.version}/builds">
-                                        <include name="moment-timezone-with-data.js"/>
-                                        <include name="moment-timezone-with-data-2010-2020.js"/>
+                                        <include name="moment-timezone-with-data.js" />
+                                        <include name="moment-timezone-with-data-2010-2020.js" />
                                     </fileset>
                                     <fileset dir="${project.build.directory}/moment-timezone-${upstream.version}">
-                                        <include name="moment-timezone.js"/>
+                                        <include name="moment-timezone.js" />
                                     </fileset>
                                 </move>
                             </target>
