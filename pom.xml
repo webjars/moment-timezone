@@ -80,18 +80,18 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="download archive" />
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
-                                <echo message="unzip archive" />
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
-                                <echo message="moving resources" />
+                                <echo message="download archive"/>
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip"/>
+                                <echo message="unzip archive"/>
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
+                                <echo message="moving resources"/>
                                 <move todir="${destDir}">
                                     <fileset dir="${project.build.directory}/moment-timezone-${upstream.version}/builds">
-                                        <include name="moment-timezone-with-data.js" />
-                                        <include name="moment-timezone-with-data-2010-2020.js" />
+                                        <include name="moment-timezone-with-data.js"/>
+                                        <include name="moment-timezone-with-data-2010-2020.js"/>
                                     </fileset>
                                     <fileset dir="${project.build.directory}/moment-timezone-${upstream.version}">
-                                        <include name="moment-timezone.js" />
+                                        <include name="moment-timezone.js"/>
                                     </fileset>
                                 </move>
                             </target>
@@ -103,13 +103,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5</version>
+                <version>2.5.1</version>
             </plugin>
 
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.2</version>
+                <version>1.6.5</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>sonatype-nexus-staging</serverId>
