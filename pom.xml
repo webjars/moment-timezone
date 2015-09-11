@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>moment-timezone</artifactId>
-    <version>0.4.1-SNAPSHOT</version>
+    <version>0.4.0-1-SNAPSHOT</version>
     <name>Moment.js Timezone plugin</name>
     <description>WebJar for Moment.js Timezone</description>
     <url>http://webjars.org</url>
@@ -29,9 +29,9 @@
                     "moment-timezone-with-data-2010-2020": "moment-timezone-with-data-2010-2020"
                 },
                 "shim": {
-                    "moment-timezone": ["momentjs"],
-                    "moment-timezone-with-data": ["momentjs"],
-                    "moment-timezone-with-data-2010-2020": ["momentjs"]
+                    "moment-timezone": ["moment"],
+                    "moment-timezone-with-data": ["moment"],
+                    "moment-timezone-with-data-2010-2020": ["moment"]
                 }
             }
         </requirejs>
